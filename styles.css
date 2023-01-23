@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+/* Variables */
+
+:root {
+  /* Colors */
+  --primary-color: hsl(0, 0%, 95%);
+  --secondary-color: hsla(0, 0%, 100%, 0.75);
+  --orange-color: hsl(31, 77%, 52%);
+  --cyan-color: hsl(184, 100%, 22%);
+  --dark-cyan-color: hsl(179, 100%, 13%);
+}
+
+/* General Styles */
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  min-height: 100vh;
+
+  display: grid;
+  place-content: center;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5rem;
+}
+
+button {
+  border: 1px solid var(--primary-color);
+  outline: none;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 30px;
+  max-width: 150px;
+}
+
+/* Vehicle Cards */
+
+.vehicle__cards {
+  max-width: 80vw;
+  margin-block: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2.5rem 3.5rem;
+}
+
+.sedan {
+  background-color: var(--orange-color);
+}
+
+.sedan button {
+  color: var(--orange-color);
+}
+
+.sedan button:hover {
+  background-color: var(--orange-color);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+.suvs {
+  background-color: var(--cyan-color);
+}
+
+.suvs button {
+  color: var(--cyan-color);
+}
+
+.suvs button:hover {
+  background-color: var(--cyan-color);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+.luxury {
+  background-color: var(--dark-cyan-color);
+}
+
+.luxury button {
+  color: var(--dark-cyan-color);
+}
+
+.luxury button:hover {
+  background-color: var(--dark-cyan-color);
+  color: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .vehicle__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
